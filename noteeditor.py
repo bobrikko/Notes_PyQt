@@ -9,7 +9,7 @@ from fpdf import FPDF
 class NoteEditor(QDialog):
     note_saved = pyqtSignal(Note)
 
-    def __init__(self, note_content="", tags="", theme="light"):
+    def __init__(self, note_content="", tags="Новая заметка", theme="light"):
         super().__init__()
         uic.loadUi("editor_window.ui", self)
         self.editor.setText(note_content)
